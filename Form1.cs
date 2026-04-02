@@ -65,8 +65,9 @@ namespace LoginScreen
             string inputPW = txtPW.Text;
             if (inputID == myID && inputPW == myPW)
             {
-                MessageBox.Show("로그인 성공!", "로그인", MessageBoxButtons.OK);
                 lblErrorMsg.Visible = false;
+                MessageBox.Show("로그인 성공!", "로그인", MessageBoxButtons.OK);
+
             }
             else
             {
@@ -101,5 +102,19 @@ namespace LoginScreen
                 btnLogin.PerformClick(); // 버튼이 눌린 것처럼 만들기
             }
         }
+
+        private void checkPW_CheckedChanged(object sender, EventArgs e)
+        {
+            if (!checkPW.Checked)
+            {
+                txtPW.UseSystemPasswordChar = true;
+            }
+            else
+            {
+                txtPW.UseSystemPasswordChar = false;
+            }
+        }
+
+       
     }
 }

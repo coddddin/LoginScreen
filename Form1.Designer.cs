@@ -35,6 +35,7 @@
             lblErrorMsg = new Label();
             lblID = new Label();
             lblPW = new Label();
+            checkPW = new CheckBox();
             SuspendLayout();
             // 
             // lblAppName
@@ -80,7 +81,7 @@
             // 
             btnLogin.BackColor = SystemColors.ActiveCaption;
             btnLogin.Font = new Font("굴림", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            btnLogin.Location = new Point(71, 297);
+            btnLogin.Location = new Point(71, 309);
             btnLogin.Name = "btnLogin";
             btnLogin.Size = new Size(359, 54);
             btnLogin.TabIndex = 1;
@@ -92,7 +93,7 @@
             // 
             lblErrorMsg.AutoSize = true;
             lblErrorMsg.ForeColor = Color.Red;
-            lblErrorMsg.Location = new Point(123, 272);
+            lblErrorMsg.Location = new Point(120, 284);
             lblErrorMsg.Name = "lblErrorMsg";
             lblErrorMsg.Size = new Size(254, 15);
             lblErrorMsg.TabIndex = 4;
@@ -121,6 +122,17 @@
             lblPW.Text = "PW";
             lblPW.Click += lblPW_Click;
             // 
+            // checkPW
+            // 
+            checkPW.AutoSize = true;
+            checkPW.Location = new Point(64, 262);
+            checkPW.Name = "checkPW";
+            checkPW.Size = new Size(183, 19);
+            checkPW.TabIndex = 7;
+            checkPW.Text = "숨겨진 비밀번호 보기/숨기기";
+            checkPW.UseVisualStyleBackColor = true;
+            checkPW.CheckedChanged += checkPW_CheckedChanged;
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -134,6 +146,7 @@
             Controls.Add(txtPW);
             Controls.Add(txtID);
             Controls.Add(lblAppName);
+            Controls.Add(checkPW);
             ForeColor = SystemColors.ControlText;
             Name = "MainForm";
             Text = "Login Screen";
@@ -150,5 +163,6 @@
         private Label lblErrorMsg;
         private Label lblID;
         private Label lblPW;
+        private CheckBox checkPW;
     }
 }
