@@ -56,6 +56,7 @@ namespace LoginScreen
                 txtPW.ForeColor = Color.Silver;
             }
         }
+
         string myID = "heejun0810";
         string myPW = "22017004@";
         private void btnLogin_Click(object sender, EventArgs e)
@@ -64,12 +65,23 @@ namespace LoginScreen
             string inputPW = txtPW.Text;
             if (inputID == myID && inputPW == myPW)
             {
-                MessageBox.Show("로그인 성공!");
+                MessageBox.Show("로그인 성공!", "로그인", MessageBoxButtons.OK);
+                lblErrorMsg.Visible = false;
             }
             else
             {
-                MessageBox.Show("로그인 실패~");
+                lblErrorMsg.Visible = true;
             }
+        }
+
+        private void lblPW_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblID_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
