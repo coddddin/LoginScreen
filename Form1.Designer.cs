@@ -72,7 +72,7 @@
             txtPW.Size = new Size(372, 39);
             txtPW.TabIndex = 2;
             txtPW.Text = "비밀번호";
-            txtPW.TextChanged += this.txtPW_TextChanged;
+            
             txtPW.Enter += txtPW_Enter;
             txtPW.Leave += txtPW_Leave;
             // 
@@ -137,7 +137,7 @@
             ForeColor = SystemColors.ControlText;
             Name = "MainForm";
             Text = "Login Screen";
-            Load += this.MainForm_Load;
+            
             ResumeLayout(false);
             PerformLayout();
         }
