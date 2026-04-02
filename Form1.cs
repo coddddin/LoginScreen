@@ -38,7 +38,7 @@ namespace LoginScreen
 
         private void txtPW_Enter(object sender, EventArgs e)
         {
-            if (txtPW.Text == "비밀번호")
+            if (txtPW.Text == "패스워드")
             {
                 txtPW.Text = "";
                 txtPW.ForeColor = Color.Black;
@@ -52,13 +52,13 @@ namespace LoginScreen
             if (string.IsNullOrWhiteSpace(txtPW.Text))
             {
                 txtPW.UseSystemPasswordChar = false;
-                txtPW.Text = "비밀번호";
+                txtPW.Text = "패스워드";
                 txtPW.ForeColor = Color.Silver;
             }
         }
 
-        string myID = "heejun0810";
-        string myPW = "22017004@";
+        string myID = "admin";
+        string myPW = "superman";
         private void btnLogin_Click(object sender, EventArgs e)
         {
             string inputID = txtID.Text;
@@ -82,6 +82,24 @@ namespace LoginScreen
         private void lblID_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtID_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.SuppressKeyPress = true; // 기본 비프음 방지
+                txtPW.Focus(); // 패스워드 입력창이 포커스를 갖게끔
+            }
+        }
+
+        private void txtPW_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.SuppressKeyPress = true; // 기본 비프음 방지
+                btnLogin.PerformClick(); // 버튼이 눌린 것처럼 만들기
+            }
         }
     }
 }

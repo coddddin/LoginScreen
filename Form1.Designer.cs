@@ -40,50 +40,50 @@
             // lblAppName
             // 
             lblAppName.AutoSize = true;
-            lblAppName.BackColor = Color.WhiteSmoke;
-            lblAppName.BorderStyle = BorderStyle.FixedSingle;
-            lblAppName.Font = new Font("함초롬돋움", 35.9999962F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 129);
-            lblAppName.Location = new Point(-1, -4);
+            lblAppName.BackColor = Color.MintCream;
+            lblAppName.Font = new Font("함초롬돋움", 48F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            lblAppName.Location = new Point(152, 22);
             lblAppName.Name = "lblAppName";
-            lblAppName.Size = new Size(587, 64);
+            lblAppName.Size = new Size(199, 83);
             lblAppName.TabIndex = 0;
-            lblAppName.Text = "    Login                           ";
+            lblAppName.Text = "Login";
             lblAppName.Click += lblLogin_Click;
             // 
             // txtID
             // 
-            txtID.Font = new Font("맑은 고딕", 18F, FontStyle.Bold);
-            txtID.ForeColor = SystemColors.ScrollBar;
-            txtID.Location = new Point(69, 126);
+            txtID.Font = new Font("맑은 고딕", 26.25F, FontStyle.Bold);
+            txtID.ForeColor = Color.Silver;
+            txtID.Location = new Point(64, 126);
             txtID.Name = "txtID";
-            txtID.Size = new Size(372, 39);
-            txtID.TabIndex = 1;
+            txtID.Size = new Size(372, 54);
+            txtID.TabIndex = 2;
             txtID.Text = "아이디";
             txtID.TextChanged += textBox1_TextChanged;
             txtID.Enter += txtID_Enter;
+            txtID.KeyDown += txtID_KeyDown;
             txtID.Leave += txtID_Leave;
             // 
             // txtPW
             // 
-            txtPW.Font = new Font("맑은 고딕", 18F, FontStyle.Bold);
-            txtPW.ForeColor = SystemColors.ScrollBar;
-            txtPW.Location = new Point(70, 196);
+            txtPW.Font = new Font("맑은 고딕", 26.25F, FontStyle.Bold);
+            txtPW.ForeColor = Color.Silver;
+            txtPW.Location = new Point(64, 202);
             txtPW.Name = "txtPW";
-            txtPW.Size = new Size(372, 39);
-            txtPW.TabIndex = 2;
-            txtPW.Text = "비밀번호";
-            
+            txtPW.Size = new Size(372, 54);
+            txtPW.TabIndex = 3;
+            txtPW.Text = "패스워드";
             txtPW.Enter += txtPW_Enter;
+            txtPW.KeyDown += txtPW_KeyDown;
             txtPW.Leave += txtPW_Leave;
             // 
             // btnLogin
             // 
             btnLogin.BackColor = SystemColors.ActiveCaption;
             btnLogin.Font = new Font("굴림", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            btnLogin.Location = new Point(73, 282);
+            btnLogin.Location = new Point(71, 297);
             btnLogin.Name = "btnLogin";
             btnLogin.Size = new Size(359, 54);
-            btnLogin.TabIndex = 3;
+            btnLogin.TabIndex = 1;
             btnLogin.Text = "로그인";
             btnLogin.UseVisualStyleBackColor = false;
             btnLogin.Click += btnLogin_Click;
@@ -92,7 +92,7 @@
             // 
             lblErrorMsg.AutoSize = true;
             lblErrorMsg.ForeColor = Color.Red;
-            lblErrorMsg.Location = new Point(72, 253);
+            lblErrorMsg.Location = new Point(123, 272);
             lblErrorMsg.Name = "lblErrorMsg";
             lblErrorMsg.Size = new Size(254, 15);
             lblErrorMsg.TabIndex = 4;
@@ -103,7 +103,7 @@
             // 
             lblID.AutoSize = true;
             lblID.ForeColor = Color.Gray;
-            lblID.Location = new Point(69, 108);
+            lblID.Location = new Point(65, 108);
             lblID.Name = "lblID";
             lblID.Size = new Size(19, 15);
             lblID.TabIndex = 5;
@@ -114,7 +114,7 @@
             // 
             lblPW.AutoSize = true;
             lblPW.ForeColor = Color.Gray;
-            lblPW.Location = new Point(68, 178);
+            lblPW.Location = new Point(64, 184);
             lblPW.Name = "lblPW";
             lblPW.Size = new Size(25, 15);
             lblPW.TabIndex = 6;
@@ -126,7 +126,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.MintCream;
-            ClientSize = new Size(534, 413);
+            ClientSize = new Size(531, 413);
             Controls.Add(lblPW);
             Controls.Add(lblID);
             Controls.Add(lblErrorMsg);
@@ -137,7 +137,6 @@
             ForeColor = SystemColors.ControlText;
             Name = "MainForm";
             Text = "Login Screen";
-            
             ResumeLayout(false);
             PerformLayout();
         }
